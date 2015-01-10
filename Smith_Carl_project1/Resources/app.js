@@ -51,15 +51,15 @@ var TitleLabel = Ti.UI.createLabel({
 	text: "Carl Smith's Top 10 Games!'"
 });
 
-var PreviousLabel = Ti.UI.createLabel({
+var PreviousLabel = Ti.UI.createLabel({ //previous button
 	text: "Previous"
 });
 
-var NextLabel = Ti.UI.createLabel({
+var NextLabel = Ti.UI.createLabel({  //next button
 	text: "Next"
 });
 
-
+var fetchfile = require("GamesData");
 FirstWindow.open();
 FirstWindow.add(FirstView , TitleView, PreviousButton, NextButton);
 TitleView.add(TitleLabel);

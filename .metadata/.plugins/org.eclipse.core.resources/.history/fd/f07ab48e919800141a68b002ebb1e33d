@@ -1,0 +1,3 @@
+//App Startfile
+
+Ti.UI.setBackgroundColor("Blue")

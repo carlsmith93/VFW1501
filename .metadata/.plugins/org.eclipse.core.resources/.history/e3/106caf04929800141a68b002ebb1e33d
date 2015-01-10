@@ -1,0 +1,10 @@
+//App Startfile
+
+Ti.UI.setBackgroundColor("black")
+
+var FirstWindow = Ti.UI.createWindow({
+	backgroundColor: 'green'
+	
+})
+
+FirstWindow.open()

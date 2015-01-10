@@ -1,0 +1,8 @@
+//App Startfile
+
+Ti.UI.setBackgroundColor("Blue")
+
+var FirstWindow = Ti.UI.createWindow({
+	backgroundColor: 'Blue'
+	
+})

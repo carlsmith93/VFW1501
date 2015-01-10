@@ -1,0 +1,23 @@
+//App Startfile
+
+Ti.UI.setBackgroundColor("#000");
+
+//Window Creation
+var FirstWindow = Ti.UI.createWindow({
+	backgroundColor: "#000" //color black
+});
+
+//View Creation
+
+var FirstView = Ti.UI.createView({
+	backgroundColor: "white",
+	bottom: 20,
+	right: 20,
+	left: 20,
+	height: 360,
+	borderRadius: 12
+
+});
+
+FirstWindow.open();
+FirstWindow.add(FirstView)

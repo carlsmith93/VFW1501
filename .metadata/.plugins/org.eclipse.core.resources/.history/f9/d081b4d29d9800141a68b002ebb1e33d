@@ -1,0 +1,40 @@
+//App Startfile
+
+Ti.UI.setBackgroundColor("#000");
+
+//Window Creation
+var FirstWindow = Ti.UI.createWindow({
+	backgroundColor: "#000" //color black
+});
+
+//View Creation
+
+var FirstView = Ti.UI.createView({
+	backgroundColor: "white",
+	bottom: 20,
+	right: 20,
+	left: 20,
+	height: 280,
+	borderRadius: 12
+});
+
+var TitleView = Ti.UI.createView({
+	backgroundColor: "white",
+	height: Ti.UI.SIZE,
+	top: 20,
+	left: 20,
+	right: 20,
+	borderRadius: 12
+});
+
+
+//Label Creation
+
+var TitleLabel = Ti.UI.createLabel({
+	text: "Carl Smith's Top 10 Games!'"
+});
+
+
+FirstWindow.open();
+FirstWindow.add(FirstView , TitleView);
+TitleView.add(TitleLabel);

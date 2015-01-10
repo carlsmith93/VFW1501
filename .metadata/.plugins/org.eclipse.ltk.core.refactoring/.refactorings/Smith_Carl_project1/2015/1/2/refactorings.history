@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Smith_Carl_project1/Resources/ScriptData.js&apos; to &apos;GamesData.js&apos;" description="Rename resource &apos;ScriptData.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/ScriptData.js" name="GamesData.js" stamp="1420876937662" updateReferences="true"/>
+</session>

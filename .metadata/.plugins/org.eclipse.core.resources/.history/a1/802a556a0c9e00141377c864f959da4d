@@ -14,8 +14,7 @@ var DataJSON = ({
 			{
 			Title: "Broad/Com Team",
 			Description: "The broad/Com Team is a team dedicated to creating videos showing the fun we all have in FTG.  They also create gameplay videos."	
-			}]
-			}),
+			}],
 			
 		Divisions: ({
 			DivTitle: "FTG Divisions",
@@ -33,6 +32,7 @@ var DataJSON = ({
 			Description: "Absolute Destruction is the newest squad on the Xbox 360 and is currently being run by FTG Firestorm"
 			}]
 		})
+	})
 });
 
-console.log(DataJSON.Divisions.DivList[0].Title);
+console.log(DataJSON.Divisions.DivTitle);

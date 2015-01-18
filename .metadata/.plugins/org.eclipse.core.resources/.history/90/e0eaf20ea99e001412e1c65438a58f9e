@@ -28,7 +28,7 @@ var PullDivInfo = function(){
 	var InfoWindow = Ti.UI.createWindow({
 		backgroundColor: "gray",
 		title: this.title,
-		font: {fontWeight: "Bold", fontFamily: "Verdana", fontSize: 20}
+		font: {fontWeight: "Bold", fontFamily: "Verdana", fontSize: 16}
 });
 	var DivDetailLabel = Ti.UI.createLabel({
 	text: this.detail,
@@ -86,7 +86,6 @@ for(var i=0, j = DataJSON.Teams.TeamList.length;i<j;i++){
 		title: DataJSON.Teams.TeamList[i].title,
 		detail: DataJSON.Teams.TeamList[i].Description,
 		hasChild: true,
-		font: {fontFamily: "Verdana", fontSize: 15}
 	});
 	TeamSection.add(TeamsRow);
 	TeamsRow.addEventListener("click", PullTeamInfo);
@@ -97,8 +96,7 @@ for(var l=0, m = DataJSON.Divisions.DivList.length;l<m;l++){
 	var DivRow = Ti.UI.createTableViewRow({
 		title: DataJSON.Divisions.DivList[l].title,
 		detail: DataJSON.Divisions.DivList[l].description,
-		hasChild: true,
-		font: {fontFamily: "Verdana", fontSize: 15}
+		hasChild: true
 	});
 	DivSection.add(DivRow);
 	DivRow.addEventListener("click", PullDivInfo);

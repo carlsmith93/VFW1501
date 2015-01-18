@@ -4,25 +4,16 @@ Titanium.UI.setBackgroundColor('black');
 
 //Start Window
 var Background = Ti.UI.createWindow({
-	backgroundColor: "black"
+	backgroundColor: "black",
+	title: "Full Throttle Gaming"
 });
 
-//Start Main Title View
-var StartTitle = Ti.UI.createView({
-	height: 70,
-	top: 0,
-	backgroundColor: "white"
+
+var Navigate = Ti.UI.iOS.createNavigationWindow({
+	window: Background
 });
 
-//Title View Label
+Navigate.open();
 
-var TitleLabel = Ti.UI.createLabel({
-	text: "Full Throttle Gaming",
-	font: {fontFamily: "Comic Sans", fontWeight: "bold", fontSize: 20}
-});
-
-Background.open();
-Background.add(StartTitle);
-StartTitle.add(TitleLabel);
 
 var fetchfile = require("FTGInfo");

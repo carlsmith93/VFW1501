@@ -86,7 +86,6 @@ for(var i=0, j = DataJSON.Teams.TeamList.length;i<j;i++){
 		title: DataJSON.Teams.TeamList[i].title,
 		detail: DataJSON.Teams.TeamList[i].Description,
 		hasChild: true,
-		font: {fontFamily: "Verdana", fontSize: 15}
 	});
 	TeamSection.add(TeamsRow);
 	TeamsRow.addEventListener("click", PullTeamInfo);

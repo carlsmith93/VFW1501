@@ -36,7 +36,72 @@ var DataJSON = ({
 		})
 });
 
-//Team Control Variable
+//Functions
+
+var PullDivInfo = function(){
+	var InfoWindow = Ti.UI.createWindow({
+		backgroundColor: "gray"
+	});
+	
+	var DivTitleView = Ti.UI.createView({
+	height: 70,
+	top: 0,
+	backgroundColor: "white"
+	});
+
+	
+	var DivLabel = Ti.UI.createLabel({
+	text: this.title,
+	font: {fontFamily: "Comic Sans", fontWeight: "bold", fontSize: 20}
+	});
+	
+	var DivDetailLabel = Ti.UI.createLabel({
+	text: this.detail,
+	left: 20,
+	right: 20,
+	top: DivTitleView.height + 20
+	});
+	
+
+	
+	DivTitleView.add(DivLabel);
+	InfoWindow.add(DivTitleView, DivDetailLabel);
+	InfoWindow.open();
+};
+
+
+
+var PullTeamInfo = function(){
+	
+	var InfoWindow = Ti.UI.createWindow({
+		backgroundColor: "gray"
+	});
+	
+	var TeamTitleView = Ti.UI.createView({
+	height: 70,
+	top: 0,
+	backgroundColor: "white"
+	});
+	
+	var TeamLabel = Ti.UI.createLabel({
+	text: this.title,
+	font: {fontFamily: "Comic Sans", fontWeight: "bold", fontSize: 20}
+	});
+	
+	var TeamDetailLabel = Ti.UI.createLabel({
+	text: this.detail,
+	left: 20,
+	right: 20,
+	top: 90
+	});
+
+TeamTitleView.add(TeamLabel);
+InfoWindow.add(TeamTitleView, TeamDetailLabel);
+InfoWindow.open();
+};
+
+
+
 
 
 //Table View
@@ -59,18 +124,22 @@ var DivSection = Ti.UI.createTableViewSection({
 for(var i=0, j = DataJSON.Teams.TeamList.length;i<j;i++){
 	var TeamsRow = Ti.UI.createTableViewRow({
 		title: DataJSON.Teams.TeamList[i].title,
+		detail: DataJSON.Teams.TeamList[i].Description,
 		hasChild: true,
 	});
 	TeamSection.add(TeamsRow);
+	TeamsRow.addEventListener("click", PullTeamInfo);
 }
 
 
 for(var l=0, m = DataJSON.Divisions.DivList.length;l<m;l++){
 	var DivRow = Ti.UI.createTableViewRow({
 		title: DataJSON.Divisions.DivList[l].title,
+		detail: DataJSON.Divisions.DivList[l].description,
 		hasChild: true
 	});
 	DivSection.add(DivRow);
+	DivRow.addEventListener("click", PullDivInfo);
 }
 
 
@@ -84,7 +153,3 @@ if(Ti.Platform.name === "iPhone OS"){
 NewDisplay.setData(ViewSections);
 NewDisplay.add(TeamSection);
 Background.add(NewDisplay);
-
-
-
-

@@ -1,3 +1,4 @@
+
 //opening background
 Titanium.UI.setBackgroundColor('black');
 

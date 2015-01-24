@@ -3,9 +3,8 @@ Titanium.UI.setBackgroundColor('black');
 
 //Start Window
 var Background = Ti.UI.createWindow({
-	backgroundColor: "black",
-	title: "Gaming Photos",
-	font: {fontWeight: "Bold", fontFamily: "Verdana", fontSize: 20}
+	backgroundColor: "white",
+	title: "Gaming Photos"
 });
 
 
@@ -15,18 +14,14 @@ var Navigate = Ti.UI.iOS.createNavigationWindow({
 
 var StartButton = Ti.UI.createView({
 	backgroundColor: "gray",
+	text: "Load Pictures",
+	top: 30,
 	left: 50,
 	right: 50,
 	height: 50
 });
 
-var ButtonLabel = Ti.UI.createLabel({
-	text: "Load Pictures",
-	font: {fontWeight: "Bold", fontFamily: "Verdana", fontSize: 15}
-	
-});
 
-StartButton.add(ButtonLabel);
 Background.add(StartButton);
 Navigate.open();
 

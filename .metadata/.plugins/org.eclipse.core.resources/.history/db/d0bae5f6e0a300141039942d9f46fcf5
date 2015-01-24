@@ -26,7 +26,7 @@ var ButtonLabel = Ti.UI.createLabel({
 	
 });
 
-StartButton.add(ButtonLabel);
+
 Background.add(StartButton);
 Navigate.open();
 

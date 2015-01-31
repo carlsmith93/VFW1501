@@ -60,13 +60,10 @@ var LoadImage = function(){
 		bottom: 0,
 		image: "Photogallery/" + Gallery[i]
 	});
-
 ImageLayer.addEventListener = ("click", LoadImage);
 Imagebackground.add(ImageLayer);
 Navigate.openWindow(Imagebackground);
 };
-
-
 
 gallerybutton.add(gallerylabel);
 Background.add(gallerybutton);

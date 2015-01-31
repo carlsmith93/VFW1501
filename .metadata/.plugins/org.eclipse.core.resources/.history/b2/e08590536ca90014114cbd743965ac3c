@@ -66,8 +66,6 @@ Imagebackground.add(ImageLayer);
 Navigate.openWindow(Imagebackground);
 };
 
-
-
 gallerybutton.add(gallerylabel);
 Background.add(gallerybutton);
 gallerybutton.addEventListener("click",LoadImage);

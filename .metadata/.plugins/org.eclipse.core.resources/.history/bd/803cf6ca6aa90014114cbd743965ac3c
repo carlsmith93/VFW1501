@@ -24,6 +24,7 @@ var LoadImage = function(){
 		backgroundColor: "black",
 		title: "Naruto Images"
 	});
+	var finishload = function(){
 	var i = 0;
 	var RandImage = Math.random();
 		if (RandImage <= .10){
@@ -60,13 +61,11 @@ var LoadImage = function(){
 		bottom: 0,
 		image: "Photogallery/" + Gallery[i]
 	});
-
-ImageLayer.addEventListener = ("click", LoadImage);
+};
+Imagebackground.addEventListener = ("click", LoadImage);
 Imagebackground.add(ImageLayer);
 Navigate.openWindow(Imagebackground);
 };
-
-
 
 gallerybutton.add(gallerylabel);
 Background.add(gallerybutton);

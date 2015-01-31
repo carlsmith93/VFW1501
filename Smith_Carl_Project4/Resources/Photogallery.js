@@ -9,7 +9,7 @@ var Gallery = LoadImages.getDirectoryListing();
 var gallerybutton = Ti.UI.createView({
 	top: 0,
 	height:80,
-	backgroundColor: "gray"
+	backgroundColor: "#303f42"
 });
 
 var gallerylabel = Ti.UI.createLabel({

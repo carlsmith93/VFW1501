@@ -2,7 +2,7 @@
 
 var LoadImages = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "Photogallery");
 var Gallery = LoadImages.getDirectoryListing();
-
+console.log(Gallery);
 
 
 //Button
@@ -10,11 +10,6 @@ var gallerybutton = Ti.UI.createView({
 	top: 0,
 	height:80,
 	backgroundColor: "gray"
-});
-
-var gallerylabel = Ti.UI.createLabel({
-	text: "View Image Gallery",
-	font: {fontWeight: "Bold", fontFamily: "Verdana", fontSize: 15}
 });
 
 //Photo Load Function
@@ -58,12 +53,12 @@ var LoadImage = function(){
 		};
 	var ImageLayer = Ti.UI.createImageView({
 		bottom: 0,
-		image: "Photogallery/" + Gallery[i]
+		image: Gallery[i]
 	});
 Imagebackground.add(ImageLayer);
 Navigate.openWindow(Imagebackground);
 };
 
-gallerybutton.add(gallerylabel);
+
 Background.add(gallerybutton);
 gallerybutton.addEventListener("click",LoadImage);

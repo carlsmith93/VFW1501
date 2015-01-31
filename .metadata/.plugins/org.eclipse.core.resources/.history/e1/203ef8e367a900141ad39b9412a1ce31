@@ -12,11 +12,6 @@ var gallerybutton = Ti.UI.createView({
 	backgroundColor: "gray"
 });
 
-var gallerylabel = Ti.UI.createLabel({
-	text: "View Image Gallery",
-	font: {fontWeight: "Bold", fontFamily: "Verdana", fontSize: 15}
-});
-
 //Photo Load Function
 
 var LoadImage = function(){
@@ -58,12 +53,12 @@ var LoadImage = function(){
 		};
 	var ImageLayer = Ti.UI.createImageView({
 		bottom: 0,
-		image: "Photogallery/" + Gallery[i]
+		image: Gallery[1]
 	});
 Imagebackground.add(ImageLayer);
 Navigate.openWindow(Imagebackground);
 };
 
-gallerybutton.add(gallerylabel);
+
 Background.add(gallerybutton);
 gallerybutton.addEventListener("click",LoadImage);

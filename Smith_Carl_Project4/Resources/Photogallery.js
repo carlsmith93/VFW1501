@@ -61,8 +61,23 @@ var LoadImage = function(){
 		image: "Photogallery/" + Gallery[i]
 	});
 
-ImageLayer.addEventListener = ("click", LoadImage);
-Imagebackground.add(ImageLayer);
+		var NextPicture = Ti.UI.createView({
+		backgroundColor: "gray",
+		height: 40,
+		top: 0
+		});
+		
+		var NextLabel = Ti.UI.createLabel({
+			text: "View another picture!"
+		});
+
+	var reload = function(){
+	Navigate.closeWindow(Imagebackground);
+	Imagebackground.addEventListener("close", LoadImage);
+	};
+NextPicture.add(NextLabel);
+NextPicture.addEventListener("click", reload);
+Imagebackground.add(ImageLayer,NextPicture);
 Navigate.openWindow(Imagebackground);
 };
 

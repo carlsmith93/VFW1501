@@ -1,11 +1,15 @@
+//Phone Size Variables
+
 var phoneheight = Ti.Platform.displayCaps.platformHeight;
 var phoneWidth = Ti.Platform.displayCaps.platformWidth;
 ThumbnailSize = phoneWidth/4 - 10;
 
+//Load Images
 var ImageFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "Images");
 var Images = ImageFolder.getDirectoryListing();
+console.log(Images);
 
-
+//Start view and Label
 var StartButton = Ti.UI.createView({
 	backgroundColor: "gray",
 	left: 50,
@@ -20,7 +24,7 @@ var ButtonLabel = Ti.UI.createLabel({
 });
 
 
-
+//Info loaded after clicking start
 
 var ScrollView = Ti.UI.createScrollView({
 	layout: "horizontal",
@@ -28,7 +32,7 @@ var ScrollView = Ti.UI.createScrollView({
 	});
 
 
-for (i = 0; i < Images.length; i++){
+for (i = 0; i < Images.length; i++){  //loop that creates the thumbnails
 	var ThumbnailView = Ti.UI.createImageView({
 	image: "Images/" + Images[i],
 	Width: ThumbnailSize,
@@ -39,7 +43,7 @@ for (i = 0; i < Images.length; i++){
 	});
 	ScrollView.add(ThumbnailView);
 
-	var FullImage = function(){
+	var FullImage = function(){  //Creates Views for full Images
 
 	var FullView = Ti.UI.createImageView({
 		image: this.image,
@@ -57,7 +61,7 @@ ThumbnailView.addEventListener("click", FullImage);
 };
 
 
-var ShowThumbnails = function(){
+var ShowThumbnails = function(){  //Creates window for thumbnails
 		
 	
 	var ThumbnailWindow = Ti.UI.createWindow({

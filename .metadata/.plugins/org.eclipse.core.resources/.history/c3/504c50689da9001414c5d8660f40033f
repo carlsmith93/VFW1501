@@ -50,9 +50,11 @@ var CharSwitch = Ti.UI.createSwitch({
 var playaudio = function(){
 	if (CharSwitch.value === true){
 		Sasuke.play();
+		console.log(CharSwitch.value);
 	}
 	else if(CharSwitch.value === false){
 		Naruto.play();
+		console.log(CharSwitch.value);
 	};
 
 CharSwitch.addEventListener('change',function(e){

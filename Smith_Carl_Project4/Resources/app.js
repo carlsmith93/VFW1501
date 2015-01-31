@@ -4,7 +4,7 @@ Titanium.UI.setBackgroundColor("black");
 //Start Window
 var Background = Ti.UI.createWindow({
 	backgroundColor: "black",
-	title: "Destiny",
+	title: "Naruto",
 	font: {fontWeight: "Bold", fontFamily: "Verdana", fontSize: 20}
 });
 
@@ -13,6 +13,11 @@ var Navigate = Ti.UI.iOS.createNavigationWindow({
 	window: Background
 });
 
+var border = Ti.UI.createView({
+	backgroundColor: "black",
+	height: 1
+});
 
 
 Navigate.open();
+var fetchgallery = require("Photogallery");

@@ -1,0 +1,72 @@
+//Create Custom Button
+
+var CustomButton = Ti.UI.createView({
+	backgroundColor: "#6c7a7d",
+	height: 80,
+	top: 160
+});
+
+var CustomLabel = Ti.UI.createLabel({
+	text: "Custom Page",
+	font: {fontWeight: "Bold", fontFamily: "Verdana", fontSize: 15}
+});
+
+
+var PlayButton = Ti.UI.createButton({
+	height: 50,
+	title: "Play Theme"
+});
+
+
+
+var Sasuke = Ti.Media.createSound({
+	url: "Audio/SasukeTheme.mp3",
+});
+
+var Naruto = Ti.Media.createSound({
+	url: "Audio/NarutoTheme.mp3"
+});
+
+
+var CharSwitch = Ti.UI.createSwitch({
+	bottom: 0,
+	value: true
+});
+
+CharSwitch.addEventListener('change',function(e){
+  Ti.API.info('Switch value: ' + CharSwitch.value);
+});
+
+var playaudio = function(){
+	if (CharSwitch.value === 1){
+		Sasuke.play();
+		console.log(CharSwitch.value);
+	}
+	else if(CharSwitch.value === 0){
+		Naruto.play();
+		console.log(CharSwitch.value);
+	};
+
+};
+
+
+
+
+
+
+
+//Open Custom Window
+var OpenCustom = function(){
+var CustWindow = Ti.UI.createWindow({
+	backgroundColor: "black",
+	title: "Custom"
+});
+CustWindow.add(CharSwitch, PlayButton);
+Navigate.openWindow(CustWindow);
+};
+
+
+PlayButton.addEventListener("click", playaudio);
+CustomButton.add(CustomLabel);
+CustomButton.addEventListener("click",OpenCustom);
+Background.add(CustomButton);

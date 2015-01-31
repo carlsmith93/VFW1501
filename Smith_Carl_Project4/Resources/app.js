@@ -17,5 +17,6 @@ var Navigate = Ti.UI.iOS.createNavigationWindow({
 
 
 Navigate.open();
-var fetchgallery = require("Photogallery");
-var fetchinfo = require("NarutoInfo");
+var fetchGallery = require("Photogallery");
+var fetchInfo = require("NarutoInfo");
+var fetchCustom = require("Custom");

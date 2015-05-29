@@ -1,7 +1,0 @@
-var gallerybutton = Ti.UI.createView({
-	top: 0,
-	height:60,
-	backgroundColor: "gray"
-});
-
-Background.add(gallerybutton);

@@ -1,0 +1,7 @@
+"/Users/carlsmith/Documents/VFW1501/Smith_Carl_Project2/build/android/gen/android/support/v7/appcompat/R.java"
+"/Users/carlsmith/Documents/VFW1501/Smith_Carl_Project2/build/android/gen/carl/smith/project2/ApplicationStylesheet.java"
+"/Users/carlsmith/Documents/VFW1501/Smith_Carl_Project2/build/android/gen/carl/smith/project2/R.java"
+"/Users/carlsmith/Documents/VFW1501/Smith_Carl_Project2/build/android/gen/carl/smith/project2/Smith_carl_project2Activity.java"
+"/Users/carlsmith/Documents/VFW1501/Smith_Carl_Project2/build/android/gen/carl/smith/project2/Smith_carl_project2AppInfo.java"
+"/Users/carlsmith/Documents/VFW1501/Smith_Carl_Project2/build/android/gen/carl/smith/project2/Smith_carl_project2Application.java"
+"/Users/carlsmith/Documents/VFW1501/Smith_Carl_Project2/build/android/gen/ti/modules/titanium/ui/R.java"
